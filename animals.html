@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>동물 도감 | 대한민국 멸종위기 동물</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- 네비게이션 -->
+  <nav>
+
+    <h2>2410 SJM</h2>
+
+    <ul>
+      <li><a href="index.html">홈</a></li>
+      <li><a href="animals.html">동물 도감</a></li>
+      <li><a href="protection.html">보호 활동</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- 상단 배너 -->
+  <header class="sub-header">
+
+    <div class="hero">
+      <h1>멸종위기 동물 도감</h1>
+
+      <p>
+        Remember. No Regret
+      </p>
+    </div>
+
+  </header>
+
+  <!-- 동물 카드 -->
+  <section>
+
+    <h2 class="section-title">
+      대표 멸종위기종
+    </h2>
+
+    <div class="filter-buttons">
+      <button onclick="filterAnimals('all')">전체보기</button>
+      <button onclick="filterAnimals('grade1')">멸종위기 1급</button>
+      <button onclick="filterAnimals('grade2')">멸종위기 2급</button>
+    </div>
+    
+    <div class="animal-grid" id="animalGrid">
+    </div>
+
+  </section>
+
+  <!-- 푸터 -->
+  <footer>
+
+    <p>
+      2410 서재민의 생태와 환경 실천 방안
+    </p>
+
+  </footer>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

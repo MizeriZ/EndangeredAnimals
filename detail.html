@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>동물 상세 정보</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav><h2>2410 SJM</h2></nav>
+    <section class="wiki-container">
+        <div id="animal-content">
+            <h1 id="title"></h1>
+            <p id="description"></p>
+            <div id="action-zone">
+                <h3>우리가 할 수 있는 일</h3>
+                <p>이 동물을 보호하기 위해 지금 바로 실천해보세요.</p>
+                <a href="#" id="wiki-link" target="_blank">자세히 알아보기 (나무위키)</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="data.js"></script>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name');
+        const animal = animals.find(a => a.name === name);
+
+        if (animal) {
+            document.getElementById('title').innerText = animal.name;
+            document.getElementById('description').innerText = animal.desc;
+            document.getElementById('wiki-link').href = `https://namu.wiki/w/${encodeURIComponent(animal.name)}`;
+        }
+    </script>
+</body>
+</html>
